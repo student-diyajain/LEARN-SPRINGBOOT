@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>ITERATE</title>
+</head>
+<body>
+<h1>this is html page of iterate</h1>
+
+<ul>
+<li th:each="n,status: ${names}" >
+<span th:text="${status.index}+' '+${status.size}+' '+${status.count}+' '+${status.first}+' '+${status.last}+' '+${n}" th:style="${status.odd?'color:red':'font-weight:bold'}"></span>
+
+</li>
+
+</ul>
+
+</body>
+</html>

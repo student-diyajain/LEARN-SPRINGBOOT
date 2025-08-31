@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>CONDITION</title>
+</head>
+<body>
+<h1>this is html page of condition</h1>
+
+	<h2 th:text="${isActive?'ACTIVE':'NOT ACTIVE'}" th:style="${isActive?'color:green':'color:red'}"></h2>
+	<hr>
+ 	<h2 th:if="${gender}=='F'">Female</h2>  <!-- jab condition true hogi tb if chalega -->
+	<h2 th:unless="${gender}=='F'">Male</h2>  <!-- jab condition false hogi toh unless chalega -->
+	<hr>
+	<div th:switch="${#lists.size(names)}">
+		<h3 th:case="'0'">zero element</h3>
+		<h3 th:case="'1'">one element</h3>
+		<h3 th:case="*">many element</h3>
+	</div>
+	
+	
+	
+
+</body>
+</html>

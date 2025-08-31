@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>ABOUT</title>
+</head>
+<body>
+<h1>this is html page of about</h1>
+
+	<h2 th:text="${name}"></h2>
+	<h2 th:text="${currentDate}"></h2>
+	<hr>
+	<h2 th:text="${#strings.toUpperCase('name')}"></h2>
+	<h2 th:text="${#strings.length('name')}"></h2>
+	<hr>
+	<div th:with="a=10,b=20,id='234'">
+	<h2 th:text="${a}"></h2>
+	<h2 th:text="${b}"></h2>
+	<h2 th:text="'id is:'+${id}"></h2>
+	</div>
+	<h2> id is: <span th:text="${id}"></span></h2>
+
+</body>
+</html>
